@@ -1,0 +1,17 @@
+{% extends 'sidebar.html' %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+</head>
+<body>
+{% block content %}
+    <div>
+        <h1>Still being built, but this is the home page</h1>
+        <h2>For user {{ user }} the personal question is {{ question }} and the answer is {{ answer }}</h2>
+    </div>
+{% endblock %}
+</body>
+</html>

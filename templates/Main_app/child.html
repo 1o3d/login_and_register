@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'sidebar.html' %}
+{% include 'Main_app/home.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}child page{% endblock %}</title>
+
+</head>
+<body>
+{% block content %}
+    <h1>this is in child block</h1>
+    {% endblock %}
+</body>
+</html>

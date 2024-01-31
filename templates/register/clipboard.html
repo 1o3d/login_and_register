@@ -1,0 +1,29 @@
+{% extends 'sidebar_logged_in.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class = 'row'>
+    <div class = 'col-5'>
+        {{ form|crispy }}
+    </div>
+    <div class = 'col-5'>
+        {% for x in info %}
+            <div class = 'row-cols-5'>
+                {% if x.text1 %}
+                {{ x.text1 }}
+                {% endif %}
+            </div>
+            <div class = 'row-cols-5'>
+                {% if x.text1 %}
+                {{ x.text2 }}
+                {% endif %}
+            </div>
+            <div class = 'row-cols-5'>
+                {% if x.text3 %}
+                {{ x.text1 }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<button type = 'Submit' class = 'btn btn-primary'> SUBMIT </button>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'sidebar.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method = 'post' class="form form_login">
+    {{form|crispy }}
+    {% csrf_token %}
+        <button type="submit" class = "btn btn-success">Submit</button>
+    <button type = "reset" class = 'btn btn-success'>Reset</button>
+    </form>
+    <h6>If you don't have an account click<a href="/register"> here</a></h6>
+    <h6><a href="/password_reset">Forgot password?</a></h6>
+{% endblock %}
